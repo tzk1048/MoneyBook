@@ -1,0 +1,735 @@
+@charset "utf-8";
+:root{
+    --color1:#BEE6FF;
+    --color2:#80CEFF;
+    --color3:#40B6FF;
+    --color4:#009DFF;
+    --color5:#BED2FF;
+    --color6:#80A6FF;
+    --color7:#4079FF;
+    --color8:#004CFF;
+}
+
+body {
+    background-color: white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Hannotate SC','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,sans-serif;
+}
+
+/*nav*/
+nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: -moz-linear-gradient(top, var(--color1), #FFF);
+    background: -webkit-linear-gradient(top, var(--color1), #FFF);
+    background: linear-gradient(to bottom, var(--color1), #FFF);
+    height: 80px;
+}
+
+#nav_title {
+    margin: auto; 
+    padding: 0;
+}
+
+#nav_menu {
+    padding: 0;
+    margin-right: 0;
+    font-size: 20px;
+}
+
+nav h1 {
+    color: var(--color7);
+    font-size: 2em;
+    padding: 0;
+    width: 60%;
+    margin: 0;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.nav_tab {
+    border-bottom: 3px solid  var(--color7);
+    background: -moz-linear-gradient(bottom, var(--color7), var(--color1));
+    background: -webkit-linear-gradient(bottom, var(--color7), var(--color1));
+    background: linear-gradient(to top, var(--color7), var(--color1));
+}
+
+.nav_tab:hover + .nav_ul2 {
+    display: block;
+    position: absolute;
+}
+
+.nav_ul2:hover {
+    display: block;
+    z-index: auto;
+    position: absolute;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav_ul1 {
+    display: flex;
+    margin: 0;
+}
+
+.nav_li1 {
+    margin: 1em;
+}
+
+.nav_ul2 {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav_ul2 li {
+    background-color: var(--color6);
+    margin: 0;
+    padding: auto;
+}
+
+.nav_ul2 li:hover {
+    background-color: var(--color5);
+}
+
+.nav_ul2 a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav_ul2 a:visited {
+    color: white;
+}
+
+/*nav終わり*/
+
+/*inputページ共通部分*/
+
+/*main*/
+
+.main {
+    float: left;
+    width: 80%;
+    margin: 0;
+}
+
+/*main-top*/
+
+.main-top {
+    width: 100%;
+    height: 50%;
+    padding: 0 10px;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+/*current_table*/
+
+/*共通部分*/
+.recordlist {
+    width: 90%;
+    border: none;
+    border-collapse: collapse;
+    margin: 1% auto;
+}
+
+.recordlist th,td {
+    border: 0.2em dotted var(--color6);
+    padding: 0.1em;
+}
+
+.recordlist tr:first-child *{
+    border-top: none;
+}
+
+.recordlist tr:last-child *{
+    border-bottom: none;
+}
+
+.recordlist th {
+    color: var(--color7);
+}
+
+.recordlist th:first-child,td:first-child {
+    border-left: none;
+}
+
+.recordlist th:last-child,td:last-child {
+    border-right: none;
+}
+
+/*共通部分終わり*/
+
+#current_table {
+    margin: 5% auto;
+}
+
+/*表示非表示ボタン*/
+
+#current_table_btn_area {
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    padding-right: 5%;
+}
+
+.current_table_btn {
+    border-width: 0.1ex;
+    color: var(--color6);
+    padding: 0 2em;
+    margin: 0.3em auto;
+    text-align: center;
+}
+
+/*更新削除ボタン*/
+
+.upbtn-td {
+    text-align: center;
+    padding: 0%;
+    width: 20px;
+}
+
+.upbtn-td:hover {
+    background-color: var(--color3);
+}
+
+.upbtn {
+    border: none;
+    background:none;
+    color: var(--color3);
+    margin: 0;
+}
+
+.upbtn:hover {
+    color: white;
+}
+
+#updtdb_now_td {
+    background-color: var(--color3);
+}
+
+.updtdb_now {
+    background: none;
+    border: none;
+    color: white;
+}
+
+.updtdb_now:hover {
+    color: var(--color8);
+}
+
+/*更新削除ボタン終わり*/
+
+/*挿入ボタン*/
+
+#current_table_insert_btn  {
+    padding: 0;
+}
+
+#insertdb {
+    margin: 1ex auto;
+    background-color: var(--color7);
+    border:0.3ex solid white;
+    width: 80%;
+    color: white;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5);
+}
+
+#insertdb:hover {
+    box-shadow: none;
+    background-color: white;
+    border:0.3ex solid var(--color7);
+    color: var(--color7);
+}
+
+/*current_table終わり*/
+/*main-top終わり*/
+
+/*main-bottom*/
+
+.main-bottom {
+    height: 50%;
+    margin: auto;
+}
+
+.area {
+    width: 90%;
+    margin: 25px auto;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 20px;
+}
+   
+.tab_class {
+    width: 18%;
+    background-color: white;
+    border-top: 3px solid var(--color4);
+    border-right: 3px solid var(--color4);
+    border-left: 30px solid var(--color4);
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 120%;
+    padding: 2px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    order: -1;
+    margin: 0 1%;
+    color: var(--color4);
+}
+   
+input[name="tab_name"] {
+    display: none;
+}
+   
+input:checked + .tab_class {
+    border-top: 3px solid var(--color7);
+    border-right: 30px solid var(--color7);
+    border-left: 3px solid var(--color7);
+    color: var(--color7);
+}
+   
+.content_class {
+    display: none;
+    width: 100%;
+    background-color: var(--color1);
+    padding: 15px;
+    border: 2px dashed var(--color7);
+    padding: 1em;
+    margin: 0;
+}
+   
+input:checked + .tab_class + .content_class {
+    display: block;
+}
+
+.input_cash {
+    margin: 0;
+    font-size: 25px;
+    padding: 1em;
+    display: inline;
+    width: 40%;
+    float: left;
+}
+
+.input_cash span {
+    margin: auto;
+    vertical-align: middle;
+}
+
+.input_cash input {
+    margin: 0 1em;
+    height: 1.5em;
+    vertical-align: middle;
+    font-size: 0.6em;
+    padding: 0 0.1em;
+}
+
+.input_cash select {
+    margin: 0 1em;
+    height: 2em;
+    vertical-align: middle;
+    font-size: 0.6em;
+    padding: 0 0.1em;
+}
+
+/*.input_cash input[type="submit"] {
+    appearance: none;
+    background: linear-gradient(to right, var(--color5), var(--color6),var(--color7));
+    border: none;
+    padding: 0;
+    color: white;
+    width: 30%;
+    height: 2em;
+    margin: 0 10% 0 60%;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5);
+}*/
+
+.input_cash input[type="submit"] {
+    appearance: none;
+    background: white;
+    border: 3px dashed var(--color4);
+    color: var(--color4);
+    width: 30%;
+    height: 2em;
+    margin: 10px 5%;
+    padding: 0;
+    text-align: center;
+    font-size: 80%;
+    font-family: 'Hannotate SC','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,sans-serif;
+}
+
+.input_cash input[type="submit"]:hover {
+    background: var(--color4);
+    border: 3px solid white;
+    color: white;
+}
+
+#input_clear {
+    appearance: none;
+    background: white;
+    border: 3px dashed var(--color7);
+    color: var(--color7);
+    width: 30%;
+    height: 2em;
+    margin: 10px 5%;
+    padding: 0;
+    text-align: center;
+    font-size: 80%;
+    font-family: 'Hannotate SC','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,sans-serif;
+}
+
+#input_clear:hover {
+    background: var(--color7);
+    border: 3px solid white;
+    color: white;
+}
+
+/*ショートカットボタン*/
+
+#markupsheet {
+    border: none;
+    border-collapse: collapse;
+    /*float: right;*/
+    margin-right: 4%;
+}
+
+#markupsheet td {
+    border: 3px dotted white;
+    padding: 0;
+}
+
+#markupsheet tr:nth-child(odd) {
+    background-color: var(--color5);
+    color: var(--color4);
+}
+
+#markupsheet tr:nth-child(even) {
+    background-color: var(--color6);
+    color: var(--color8);
+}
+
+.markupcard {
+    margin: 0;
+    padding: 1em;
+    border-radius: 30%;
+    display: inline-block;
+}
+
+.markupcard h5 {
+    font-size: 20px;
+    padding: 0 2em;
+    margin: 0;
+    padding: 0;
+}
+
+.markupcard ul {
+    list-style: none;
+    display: none;
+    margin: 0;
+    padding: 0;
+    
+}
+.markupcard h5:hover + ul {
+    display: block;
+}
+
+.markupcard ul:hover {
+    display: block;
+}
+
+/*#markupcard1 {
+    background-color: var(--color1);
+}
+
+#markupcard2 {
+    background-color: var(--color2);
+}
+
+#markupcard3 {
+    background-color: var(--color3);
+}
+
+#markupcard4 {
+    background-color: var(--color4);
+}
+
+#markupcard5 {
+    background-color: var(--color5);
+}
+
+#markupcard6 {
+    background-color: var(--color6);
+}
+
+#markupcard1:hover {
+    background-color: var(--color6);
+}
+
+#markupcard2:hover {
+    background-color: var(--color5);
+}
+
+#markupcard3:hover {
+    background-color: var(--color4);
+}
+
+#markupcard4:hover {
+    background-color: var(--color3);
+}
+
+#markupcard5:hover {
+    background-color: var(--color2);
+}
+
+#markupcard6:hover {
+    background-color: var(--color1);
+}*/
+
+/*ショートカットボタン終わり*/
+
+.list_btn {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    border: none;
+    border-bottom: solid 3px var(--color7);
+    border-left: solid 3px var(--color7);
+    background-color: white;
+    color: var(--color7);
+    transition: .4s;
+}
+  
+.list_btn:hover {
+    padding-left: 0.7em;
+    padding-right: 0.3em;
+}
+
+#inputary {
+    margin: 1em auto;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+#inputary td {
+    background-color: var(--color5);
+    border: 2px solid var(--color7);
+    color: var(--color8);
+}
+
+#inputary input {
+    border: none;
+    border-bottom:1px dashed var(--color7);
+    background: none;
+    color: var(--color8);
+    text-align: center;
+}
+
+#inputary select {
+    border: none;
+    border-bottom:1px dashed var(--color7);
+    background: none;
+    color: var(--color8);
+}
+
+#inputary_title {
+    color: var(--color7);
+    font-size: 20px;
+}
+
+#inputary_title td {
+    border: none;
+    background: none;
+}
+
+
+.right {
+    float: left;
+    width: 20%;
+    margin: auto;
+}
+
+.chart {
+    background-color: white;
+}
+
+.chart li {
+    display:  inline-block;
+    width:  100px;
+    margin: 10px;
+    text-align:  center;
+}
+ 
+.bar {
+    width:  20px;
+    margin:  0 auto;
+    padding: 0;
+    background-color: black;
+}
+
+.dateexpend_graph {
+    background: white;
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
+.dateexpend_graph li{
+    display:  inline-block;
+    width:  15px;
+    margin: 4px ;
+    text-align:  center;
+}
+
+.dex {
+    width:  15px;
+    margin:  0 auto;
+    padding: 0;
+    background-color: var(--color6);
+}
+
+/*#payment_shortcut_set {
+    table-layout: fixed;
+    width: 100%;
+}*/
+
+.listsetting {
+    border-collapse: collapse;
+}
+
+/*.content_class {
+    width: 80%;
+    margin: auto;
+}
+
+.tab_class {
+    width: 150px;
+    margin: 0;
+}*/
+
+
+.current_preview {
+    border: 0.5ex dotted var(--color1);
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+#payment_list_btn {
+    color: var(--color2);
+    margin: 0 auto;
+    padding: 0 5em;
+    width: 100%;
+}
+
+/*index*/
+#indexbody {
+    background-color: var(--color1);
+}
+/*index終わり*/
+
+/*Small devices (landscape phones, 576px and up)*/
+
+@media (min-width: 576px) {
+
+}
+/*Medium devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    #nav_title {
+        width: 50%;
+    }
+    
+    .nav_tab {
+        padding: 0 1em;
+    }
+    
+    .nav_li1 {
+        width: 30%;
+    }
+
+    .nav_ul2 {
+        width: 40%;
+    }
+
+    .nav_ul2 li {
+        width: 30%;
+    }
+
+    #current_preview_h {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+    }
+    
+    #current_preview_btn {
+        color: var(--color2);
+        margin: 0 0.3em;
+        padding: 0 0.2em;;
+    }
+
+    #inputary td {
+        padding: 0 0.5em;
+    }
+
+}
+/*Large devices (desktops, 992px and up)*/
+
+@media (min-width: 992px) {
+    #nav_title {
+        width: 60%;
+    }
+    
+    .nav_tab {
+        padding: 0 1.2
+        em;
+    }
+    
+    .nav_li1 {
+        width: 30%;
+    }
+
+    .nav_ul2 {
+        width: 30%;
+    }
+
+    .nav_ul2 li {
+        width: 30%;
+    }
+
+    #current_preview_h {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+    }
+    
+    #current_preview_btn {
+        color: var(--color2);
+        margin: 0 0.8em;
+        padding: 0 0.3em;;
+    }
+    
+    #inputary td {
+        padding: 0 1em;
+    }
+    
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+
+
+}

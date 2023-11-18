@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta  charset="utf-8" />
+        <title>支出リスト</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script type="text/javascript">
+            function CheckDelete(){
+                return confirm("削除してもよろしいですか？");
+            }
+        </script>
+    </head>
+    <body>
+        <nav>
+            <h1>MoneyBook</h1>
+            <ul>
+                <li>入力
+                    <ul>
+                        <li><a href='input_cash.php'>支払い</a></li>
+                        <li>移動</li>
+                        <li><a href='input_credit.php'>クレジット</li>
+                        <li><a href='input_oshichokin.php'>推し貯金</a></li>
+                    </ul>
+                </li>
+                <li>閲覧
+                    <ul>
+                        <li><a href='viewer_expenditure.php'>支払い</a></li>
+                        <li>移動</li>
+                        <li>クレジット</li>
+                        <li><a href='viewer_oshichokin.php'>推し貯金</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href='statement.php'>残高</a></li>
+                        <li><a href='month_aggregate.php'>月集計</a></li>
+                    </ul>
+                </li>
+                <li>設定
+                    <ul>
+                        <li><a href='list_setting.php'>リスト設定</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>        <div>
+            <p>test</p>
+            <p id="test"></p>
+            <p>test2</p>
+            <p id="test2"></p>
+            <button onclick="selectShop_Contents(1)">test-button</button>
+            <p>test3</p>
+            <p id="test3"></p>
+            <p>test4</p>
+            <p id="test4"></p>
+            <p>test5</p>
+            <p id="test5"></p>
+            <p>test6</p>
+            <p id="test6"></p>
+            <p>test7</p>
+            <p id="test7"></p>
+            <p>oo</p>
+            <p></p>
+        </div>
+        <div class="main">
+            <div class="main-top">
+                <table class='recordlist' id='expendtable'><tr><th>日付</th><th>支払い方法</th><th>項目</th><th>金額</th><th>備考</th><th colspan='2'></th></tr>
+<tr id='6'><td>2022-01-22</td><td id='101'>現金</td><td id='10003'>交遊費</td><td>23234</td><td>test</td><td class='upbtn-td'><input type='button' class='upbtn' value='更新' onClick='update_ex(6)'></td><td class='upbtn-td'>
+<form method='post' action=''>
+<input type='hidden' name='id' id='Daleteid' value='6'>
+<input type='submit' class='upbtn' name='delete' value='削除' onClick='return CheckDelete()'>
+</form>
+</td></tr>
+<tr id='7'><td>2022-01-22</td><td id='101'>現金</td><td id='10003'>交遊費</td><td>23234</td><td>test</td><td class='upbtn-td'><input type='button' class='upbtn' value='更新' onClick='update_ex(7)'></td><td class='upbtn-td'>
+<form method='post' action=''>
+<input type='hidden' name='id' id='Daleteid' value='7'>
+<input type='submit' class='upbtn' name='delete' value='削除' onClick='return CheckDelete()'>
+</form>
+</td></tr>
+<tr id='8'><td>2022-01-22</td><td id='101'>現金</td><td id='10003'>交遊費</td><td>23234</td><td>test</td><td class='upbtn-td'><input type='button' class='upbtn' value='更新' onClick='update_ex(8)'></td><td class='upbtn-td'>
+<form method='post' action=''>
+<input type='hidden' name='id' id='Daleteid' value='8'>
+<input type='submit' class='upbtn' name='delete' value='削除' onClick='return CheckDelete()'>
+</form>
+</td></tr>
+<tr id='15'><td>2022-02-13</td><td id='101'>現金</td><td id='10001'>食費</td><td>100</td><td>test</td><td class='upbtn-td'><input type='button' class='upbtn' value='更新' onClick='update_ex(15)'></td><td class='upbtn-td'>
+<form method='post' action=''>
+<input type='hidden' name='id' id='Daleteid' value='15'>
+<input type='submit' class='upbtn' name='delete' value='削除' onClick='return CheckDelete()'>
+</form>
+</td></tr>
+<tr id='16'><td>2022-02-01</td><td id='101'>現金</td><td id='10001'>食費</td><td>100</td><td>test</td><td class='upbtn-td'><input type='button' class='upbtn' value='更新' onClick='update_ex(16)'></td><td class='upbtn-td'>
+<form method='post' action=''>
+<input type='hidden' name='id' id='Daleteid' value='16'>
+<input type='submit' class='upbtn' name='delete' value='削除' onClick='return CheckDelete()'>
+</form>
+</td></tr>
+<tr id='17'><td>2022-02-01</td><td id='101'>現金</td><td id='10001'>食費</td><td>100</td><td>test</td><td class='upbtn-td'><input type='button' class='upbtn' value='更新' onClick='update_ex(17)'></td><td class='upbtn-td'>
+<form method='post' action=''>
+<input type='hidden' name='id' id='Daleteid' value='17'>
+<input type='submit' class='upbtn' name='delete' value='削除' onClick='return CheckDelete()'>
+</form>
+</td></tr>
+<tr id='18'><td>2022-02-01</td><td id='101'>現金</td><td id='10001'>食費</td><td>100</td><td>test</td><td class='upbtn-td'><input type='button' class='upbtn' value='更新' onClick='update_ex(18)'></td><td class='upbtn-td'>
+<form method='post' action=''>
+<input type='hidden' name='id' id='Daleteid' value='18'>
+<input type='submit' class='upbtn' name='delete' value='削除' onClick='return CheckDelete()'>
+</form>
+</td></tr>
+<tr id='19'><td>2022-02-02</td><td id='102'>PayPay</td><td id='10004'>スタバ</td><td>100</td><td>test</td><td class='upbtn-td'><input type='button' class='upbtn' value='更新' onClick='update_ex(19)'></td><td class='upbtn-td'>
+<form method='post' action=''>
+<input type='hidden' name='id' id='Daleteid' value='19'>
+<input type='submit' class='upbtn' name='delete' value='削除' onClick='return CheckDelete()'>
+</form>
+</td></tr>
+<tr id='20'><td>2022-02-02</td><td id='102'>PayPay</td><td id='10004'>スタバ</td><td>100</td><td>test</td><td class='upbtn-td'><input type='button' class='upbtn' value='更新' onClick='update_ex(20)'></td><td class='upbtn-td'>
+<form method='post' action=''>
+<input type='hidden' name='id' id='Daleteid' value='20'>
+<input type='submit' class='upbtn' name='delete' value='削除' onClick='return CheckDelete()'>
+</form>
+</td></tr>
+<tr id='21'><td>2022-02-02</td><td id='102'>PayPay</td><td id='10004'>スタバ</td><td>100</td><td>test</td><td class='upbtn-td'><input type='button' class='upbtn' value='更新' onClick='update_ex(21)'></td><td class='upbtn-td'>
+<form method='post' action=''>
+<input type='hidden' name='id' id='Daleteid' value='21'>
+<input type='submit' class='upbtn' name='delete' value='削除' onClick='return CheckDelete()'>
+</form>
+</td></tr>
+<tr id='22'><td>2022-02-02</td><td id='102'>PayPay</td><td id='10004'>スタバ</td><td>100</td><td>test</td><td class='upbtn-td'><input type='button' class='upbtn' value='更新' onClick='update_ex(22)'></td><td class='upbtn-td'>
+<form method='post' action=''>
+<input type='hidden' name='id' id='Daleteid' value='22'>
+<input type='submit' class='upbtn' name='delete' value='削除' onClick='return CheckDelete()'>
+</form>
+</td></tr>
+<tr id='23'><td>2022-02-02</td><td id='102'>PayPay</td><td id='10004'>スタバ</td><td>100</td><td>test</td><td class='upbtn-td'><input type='button' class='upbtn' value='更新' onClick='update_ex(23)'></td><td class='upbtn-td'>
+<form method='post' action=''>
+<input type='hidden' name='id' id='Daleteid' value='23'>
+<input type='submit' class='upbtn' name='delete' value='削除' onClick='return CheckDelete()'>
+</form>
+</td></tr>
+<tr id='24'><td>2022-02-02</td><td id='102'>PayPay</td><td id='10004'>スタバ</td><td>100</td><td>test</td><td class='upbtn-td'><input type='button' class='upbtn' value='更新' onClick='update_ex(24)'></td><td class='upbtn-td'>
+<form method='post' action=''>
+<input type='hidden' name='id' id='Daleteid' value='24'>
+<input type='submit' class='upbtn' name='delete' value='削除' onClick='return CheckDelete()'>
+</form>
+</td></tr>
+<tr id='25'><td>2022-02-27</td><td id='102'>PayPay</td><td id='10004'>スタバ</td><td>572</td><td>test</td><td class='upbtn-td'><input type='button' class='upbtn' value='更新' onClick='update_ex(25)'></td><td class='upbtn-td'>
+<form method='post' action=''>
+<input type='hidden' name='id' id='Daleteid' value='25'>
+<input type='submit' class='upbtn' name='delete' value='削除' onClick='return CheckDelete()'>
+</form>
+</td></tr>
+</table>
+                <form action="" method="post">
+                    <input type="submit" name="insertdb" value="挿入" class="insertdb">
+                </form>
+            </div>
+            <div class="main-bottom">
+                <div class="area">
+                    <input type="radio" name="tab_name" id="tab1" checked>
+                    <label class="tab_class" for="tab1">入力</label>
+                    <div class="content_class">
+                        <form action="" method="post" class="input_cash">
+                            <label><span class="inputlabel">日付</span><input type="date" id="inputcash_date" name="date"></label><br>
+                            <label>支払い方法<select name='FromBID'>
+<option value=101>現金</option>
+<option value=102>PayPay</option>
+<option value=103>SUGOCA</option>
+<option value=104>SUGOCA2</option>
+<option value=105>WAON</option>
+<option value=106>福銀(デビット）</option>
+<option value=107>西銀</option>
+<option value=108>貯金予備軍</option>
+<option value=109>ゆうちょ</option>
+<option value=110>ひびき</option>
+<option value=111>目的預金</option>
+<option value=112>取り置き</option>
+<option value=114>aaa</option>
+</select></label><br>
+                            <label><span class="inputlabel">購入項目ID</span><input type="number" id="inputcash_ConID" name="ConID" min="1" max="31"></label><br>
+                            <label><span class="inputlabel">購入項目</span><input type="text" id="inputcash_ConName"></label><br>
+                            <label><span class="inputlabel">金額</span><input type="number" name="price"></label><br>
+                            <label><span class="inputlabel">備考</span><input type="text" name="comment"></label><br>
+                            <input type="submit" name="input_cash" value="入力">
+                        </form>
+                    </div>
+                    <input type="radio" name="tab_name" id="tab2" >
+                    <label class="tab_class" for="tab2">リスト入力</label>
+                    <div class="content_class">
+                        <button onclick="ListShortSet()">セット</button>
+                        <button onclick="ListShortClear()">固定値クリア</button>
+                        <button onclick="ListShortDataClear()">データクリア</button>
+                        <button onclick="ListShortAllClear()">全クリア</button>
+                        <form action="" method="post" id="input">
+                            <table id="inputary">
+                            <tr id="listshort"><td><input type="date" id="listshort_date"></td><td><select id="listshort_bank"></select></td><td><input type="number" min="1" max="31" id="listshort_payid" onchange="SelectPayTag()"><select id="listshort_pay" onchange="InsertPayId()"></select></td><td><input type="number" id="listshort_price"></td><td><input type="text" id="listshort_com"></td></tr>
+                                <tr><th>日付</th><th>支払い方法</th><th>項目</th><th>金額</th><th>備考</th></tr>
+                                <tr><td><input type="date" form="input" name="date[0]" class="shortcutdate"></td><td><select form="input" name="FromBID[0]" class="shortcuttagpay"></select></td><td><input type="number" min="1" max="31" form="input" class="shortcutcon" onchange="ShortcutShop_num(0)"><select name="ConID[0]" class="shortcuttagshop" onchange="ShortcutShop_tag(0)"></select></td><td><input type="number" form="input" name="price[0]" class="shortcutprice"></td><td><input type="text" form="input" name="comment[0]" class="shortcutcom"></td></tr>
+                                <tr><td><input type="date" form="input" name="date[1]" class="shortcutdate"></td><td><select form="input" name="FromBID[1]" class="shortcuttagpay"></select></td><td><input type="number" min="1" max="31" form="input" class="shortcutcon" onchange="ShortcutShop_num(1)"><select name="ConID[1]" class="shortcuttagshop" onchange="ShortcutShop_tag(1)"></select></td><td><input type="number" form="input" name="price[1]" class="shortcutprice"></td><td><input type="text" form="input" name="comment[1]" class="shortcutcom"></td></tr>
+                                <tr><td><input type="date" form="input" name="date[2]" class="shortcutdate"></td><td><select form="input" name="FromBID[2]" class="shortcuttagpay"></select></td><td><input type="number" min="1" max="31" form="input" class="shortcutcon" onchange="ShortcutShop_num(2)"><select name="ConID[2]" class="shortcuttagshop" onchange="ShortcutShop_tag(2)"></select></td><td><input type="number" form="input" name="price[2]" class="shortcutprice"></td><td><input type="text" form="input" name="comment[2]" class="shortcutcom"></td></tr>
+                            </table>
+                            <input type="submit" form="input" value="挿入" name="inputary">
+                        </form>
+                        <button onclick="Insert()">追加</button>
+                    </div>
+                    <input type="radio" name="tab_name" id="tab3" >
+                    <label class="tab_class" for="tab3">ショートカット</label>
+                    <div class="content_class">
+                      <table class='recordlist' id='payment_shortcut'><tr><th>日付</th><th>支払い方法</th><th>項目</th><th>金額</th><th>備考</th><th colspan='2'></th></tr>
+<tr id='sc1'><form action='' method='post' id='scform'><td></td><td id='102'>PayPay</td><td id='10004'>スタバ</td><td>572</td><td></td><td class='upbtn-td'><input type='button' class='upbtn' value='追加' onClick='InsertRecordPay(1)'></td><td class='upbtn-td'>
+<input type='button' class='upbtn' value='複数追加'>
+</td></from></tr>
+<tr id='sc2'><form action='' method='post' id='scform'><td></td><td id='101'>現金</td><td id='10022'>ママ</td><td>30000</td><td></td><td class='upbtn-td'><input type='button' class='upbtn' value='追加' onClick='InsertRecordPay(2)'></td><td class='upbtn-td'>
+<input type='button' class='upbtn' value='複数追加'>
+</td></from></tr>
+</table>
+                    </div>
+                    <input type="radio" name="tab_name" id="tab4" >
+                    <label class="tab_class" for="tab4">ショートカット設定</label>
+                    <div class="content_class">
+                        <table class='recordlist' id='payment_shortcut'>
+                            <tr><th>日付</th><th>支払い方法</th><th>項目</th><th>金額</th><th>備考</th><th colspan='2'></th></tr>
+                            <tr id='sc1'>
+                                <form action='' method='post' id='scform'>
+                                    <td></td>
+                                    <td id='102'>PayPay</td>
+                                    <td id='10004'>スタバ</td>
+                                    <td>572</td>
+                                    <td></td>
+                                    <td class='upbtn-td'><input type='button' class='upbtn' value='追加' onClick='InsertRecordPay(1)'></td>
+                                    <td class='upbtn-td'><input type='button' class='upbtn' value='複数追加'></td>
+                                </form>
+                            </tr>
+<tr id='sc2'><form action='' method='post' id='scform'><td></td><td id='101'>現金</td><td id='10022'>ママ</td><td>30000</td><td></td><td class='upbtn-td'><input type='button' class='upbtn' value='追加' onClick='InsertRecordPay(2)'></td><td class='upbtn-td'>
+<input type='button' class='upbtn' value='複数追加'>
+</td></from></tr>
+</table>
+                    </div>
+                    <input type="radio" name="tab_name" id="tab5" >
+                    <label class="tab_class" for="tab5">その他</label>
+                    <div class="content_class">
+                      <p>タブ5のコンテンツを表示します</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <table class='recordlist' id='Shop_ContentsList'><tr><th>ID</th><th>項目</th></tr>
+<tr onclick='selectShop_Contents(10001)'><td>1</td><td>食費</td></tr>
+<tr onclick='selectShop_Contents(10002)'><td>2</td><td>外食代</td></tr>
+<tr onclick='selectShop_Contents(10003)'><td>3</td><td>交遊費</td></tr>
+<tr onclick='selectShop_Contents(10004)'><td>4</td><td>スタバ</td></tr>
+<tr onclick='selectShop_Contents(10005)'><td>5</td><td>服・靴</td></tr>
+<tr onclick='selectShop_Contents(10006)'><td>6</td><td>アクセサリー</td></tr>
+<tr onclick='selectShop_Contents(10007)'><td>7</td><td>化粧・スキンケア</td></tr>
+<tr onclick='selectShop_Contents(10008)'><td>8</td><td>電子書籍</td></tr>
+<tr onclick='selectShop_Contents(10009)'><td>9</td><td>本</td></tr>
+<tr onclick='selectShop_Contents(10010)'><td>10</td><td>楽譜</td></tr>
+<tr onclick='selectShop_Contents(10011)'><td>11</td><td>サブスク</td></tr>
+<tr onclick='selectShop_Contents(10012)'><td>12</td><td>携帯代</td></tr>
+<tr onclick='selectShop_Contents(10013)'><td>13</td><td>SixTONES</td></tr>
+<tr onclick='selectShop_Contents(10014)'><td>14</td><td>SixTONES外</td></tr>
+<tr onclick='selectShop_Contents(10015)'><td>15</td><td>機械類</td></tr>
+<tr onclick='selectShop_Contents(10016)'><td>16</td><td>交通費</td></tr>
+<tr onclick='selectShop_Contents(10017)'><td>17</td><td>その他（必要経費）</td></tr>
+<tr onclick='selectShop_Contents(10018)'><td>18</td><td>ガチでその他</td></tr>
+<tr onclick='selectShop_Contents(10019)'><td>19</td><td>使途不明金</td></tr>
+<tr onclick='selectShop_Contents(10020)'><td>20</td><td>勉強</td></tr>
+<tr onclick='selectShop_Contents(10021)'><td>21</td><td>工作</td></tr>
+<tr onclick='selectShop_Contents(10022)'><td>22</td><td>ママ</td></tr>
+<tr onclick='selectShop_Contents(10023)'><td>23</td><td>立替</td></tr>
+<tr onclick='selectShop_Contents(10024)'><td>24</td><td>クレヨンしんちゃん</td></tr>
+<tr onclick='selectShop_Contents(10025)'><td>25</td><td>文具</td></tr>
+<tr onclick='selectShop_Contents(10026)'><td>26</td><td>医療費</td></tr>
+<tr onclick='selectShop_Contents(10027)'><td>27</td><td>収納・家具</td></tr>
+<tr onclick='selectShop_Contents(10028)'><td>28</td><td>仕事</td></tr>
+<tr onclick='selectShop_Contents(10029)'><td>29</td><td>aaaa</td></tr>
+<tr onclick='selectShop_Contents(10030)'><td>30</td><td>abcd</td></tr>
+<tr onclick='selectShop_Contents(10031)'><td>31</td><td>1234</td></tr>
+</table>
+        </div>
+        <div id='updttagpay' style="display: none;"><select form='updt' name='FromBID' id='updtbankpay'>
+<option value=101>現金</option>
+<option value=102>PayPay</option>
+<option value=103>SUGOCA</option>
+<option value=104>SUGOCA2</option>
+<option value=105>WAON</option>
+<option value=106>福銀(デビット）</option>
+<option value=107>西銀</option>
+<option value=108>貯金予備軍</option>
+<option value=109>ゆうちょ</option>
+<option value=110>ひびき</option>
+<option value=111>目的預金</option>
+<option value=112>取り置き</option>
+<option value=114>aaa</option>
+</select></div>
+        <div id='updttagshopcon' style="display: none;"><select form='updt' name='ConID' id='updtshopcon'>
+<option value=10001>食費</option>
+<option value=10002>外食代</option>
+<option value=10003>交遊費</option>
+<option value=10004>スタバ</option>
+<option value=10005>服・靴</option>
+<option value=10006>アクセサリー</option>
+<option value=10007>化粧・スキンケア</option>
+<option value=10008>電子書籍</option>
+<option value=10009>本</option>
+<option value=10010>楽譜</option>
+<option value=10011>サブスク</option>
+<option value=10012>携帯代</option>
+<option value=10013>SixTONES</option>
+<option value=10014>SixTONES外</option>
+<option value=10015>機械類</option>
+<option value=10016>交通費</option>
+<option value=10017>その他（必要経費）</option>
+<option value=10018>ガチでその他</option>
+<option value=10019>使途不明金</option>
+<option value=10020>勉強</option>
+<option value=10021>工作</option>
+<option value=10022>ママ</option>
+<option value=10023>立替</option>
+<option value=10024>クレヨンしんちゃん</option>
+<option value=10025>文具</option>
+<option value=10026>医療費</option>
+<option value=10027>収納・家具</option>
+<option value=10028>仕事</option>
+<option value=10029>aaaa</option>
+<option value=10030>abcd</option>
+<option value=10031>1234</option>
+</select></div>
+        <div id='shorttagpay' style="display: none;"><option value=0>---</option>
+<option value=101>現金</option>
+<option value=102>PayPay</option>
+<option value=103>SUGOCA</option>
+<option value=104>SUGOCA2</option>
+<option value=105>WAON</option>
+<option value=106>福銀(デビット）</option>
+<option value=107>西銀</option>
+<option value=108>貯金予備軍</option>
+<option value=109>ゆうちょ</option>
+<option value=110>ひびき</option>
+<option value=111>目的預金</option>
+<option value=112>取り置き</option>
+<option value=114>aaa</option>
+</div>
+        <div id='shorttagshop' style="display: none;"><option value=0>---</option>
+<option value=10001>食費</option>
+<option value=10002>外食代</option>
+<option value=10003>交遊費</option>
+<option value=10004>スタバ</option>
+<option value=10005>服・靴</option>
+<option value=10006>アクセサリー</option>
+<option value=10007>化粧・スキンケア</option>
+<option value=10008>電子書籍</option>
+<option value=10009>本</option>
+<option value=10010>楽譜</option>
+<option value=10011>サブスク</option>
+<option value=10012>携帯代</option>
+<option value=10013>SixTONES</option>
+<option value=10014>SixTONES外</option>
+<option value=10015>機械類</option>
+<option value=10016>交通費</option>
+<option value=10017>その他（必要経費）</option>
+<option value=10018>ガチでその他</option>
+<option value=10019>使途不明金</option>
+<option value=10020>勉強</option>
+<option value=10021>工作</option>
+<option value=10022>ママ</option>
+<option value=10023>立替</option>
+<option value=10024>クレヨンしんちゃん</option>
+<option value=10025>文具</option>
+<option value=10026>医療費</option>
+<option value=10027>収納・家具</option>
+<option value=10028>仕事</option>
+<option value=10029>aaaa</option>
+<option value=10030>abcd</option>
+<option value=10031>1234</option>
+</div>
+        <div id='payid_max' style="display: none;">31</div>
+        <script language="JavaScript" type="text/javascript" src="input.js"></script>
+        <script language="JavaScript" type="text/javascript" src="update.js"></script>
+        <script language="JavaScript" type="text/javascript" src="shortcut.js"></script>
+    </body>
+</html>
